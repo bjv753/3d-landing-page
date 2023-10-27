@@ -2,11 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import fontLight from "../assets/fonts/SourceSansPro-Light.ttf"
 import fontRegular from "../assets/fonts/SourceSansPro-Regular.ttf"
 
+
+
 export const GlobalStyle = createGlobalStyle`
 
 *,*::before,*::after {
       margin: 0;
       padding: 0;
+      ${'' /* outline: 1px solid red !important; */}
+}
 
 h1,h2,h3,h4,h5,h6 {
       margin: 0;
@@ -15,19 +19,19 @@ h1,h2,h3,h4,h5,h6 {
 
 @font-face {
       font-family: 'Source Sans Pro light';
-      src: local('Source Sans Pro light'), url( ${fontLight} format("truetype"));
+      src: local('Source Sans Pro light'), url(${fontLight}) format("truetype");
       font-display: swap;
       font-style: normal;
 }
 
 @font-face {
       font-family: 'Source Sans Pro';
-      src: local('Source Sans Pro'), url( ${fontRegular} format("truetype"));
-      font-display: swap;
+      src: local('Source Sans Pro'), url(${fontRegular}) format("truetype") ;
+      font-display:swap;
       font-style: normal;
 }
 
-body {
+body{
       font-family: "Source Sans Pro", sans-serif;
       overflow-x: hidden;
 }
@@ -62,4 +66,5 @@ body {
     --gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;
   }
 
+  
 `
