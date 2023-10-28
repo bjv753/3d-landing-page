@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import { Model } from '../assets/3D-Model/Scene'
+import { Suspense } from 'react'
+
 
 const Container = styled.div`
       width: 100vw;
@@ -17,11 +18,12 @@ const Container = styled.div`
 const PhoneModel = () => {
   return (
     <Container>
-      <Canvas>
-            <ambientLight intensity={1.25} />
-            <directionalLight position={[1, 0, 0]} />
-            <Model />
-            <OrbitControls />
+      <Canvas camera={{ fov:14 }} >
+            <ambientLight intensity={2.25} />
+            <directionalLight intensity={0.4} />
+            <Suspense fallback={null} >
+              <Model />
+            </Suspense>
       </Canvas>
     </Container>
   )

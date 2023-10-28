@@ -1,5 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Section = styled.section`
 width: 100vw;
@@ -9,6 +11,7 @@ position: relative;
 display: flex;
 justify-content: center;
 align-items: center;
+
 `
 
 const TextContainer = styled.div`
@@ -60,6 +63,8 @@ span{
 `
 
 const Quote = () => {
+
+gsap.registerPlugin(ScrollTrigger);
   return (
     <Section>
       <TextContainer>
