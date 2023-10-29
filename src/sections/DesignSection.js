@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
 import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from "gsap";
 import styled from 'styled-components'
 
 const Section = styled.section`
