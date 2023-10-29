@@ -64,9 +64,20 @@ const TextContainer = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       transform: rotate(-25deg);
       z-index: 1;
       margin-bottom: 4rem;
+`
+
+const MovingText = styled.h1`
+      font-size: var(--fontBig);
+      font-family: var(--fontL);
+
+      background-image: linear-gradient(-45deg, var(--gradient));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 `
 
 
@@ -92,8 +103,8 @@ const DisplaySection = () => {
         </TextBlockLeft>
 
         <TextContainer>
-            <span>Tougher than ever!</span>
-            <span>Every touch matters.</span>
+            <MovingText>Tougher than ever!</MovingText>
+            <MovingText>Every touch matters.</MovingText>
         </TextContainer>
     </Section>
   )
