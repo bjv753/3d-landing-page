@@ -31,7 +31,8 @@ export function Model({ ...props }) {
       }
     });
 
-    t1.fromTo(camera.position, {y:2}, {y:0});
+    t1.fromTo(camera.position, {y:2}, {y:0})
+       .fromTo(camera.position, {x:1}, {x:0});
 
   }, [])
 
