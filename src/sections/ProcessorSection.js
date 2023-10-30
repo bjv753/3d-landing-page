@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import a15 from "../assets/Images/A15-Bionic.jpg"
 
 const Section = styled.section`
@@ -33,12 +33,25 @@ const Title = styled.h1`
             -webkit-text-fill-color: transparent;
 `
 
+const glow = keyframes`
+0% {
+      box-shadow: 1px 1px 10px var(--white);
+}
+50% {
+      box-shadow: 2px 2px 25px var(--white);
+}
+100% {
+      box-shadow: 1px 1px 10px var(--white);
+}
+`
+
 const Processor = styled.div`
       width: 25%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      animation: ${glow} 3s ease infinite;
 
       display: flex;
       justify-content: center;
