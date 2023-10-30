@@ -52,6 +52,7 @@ const Processor = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       animation: ${glow} 3s ease infinite;
+      padding: 0.5rem;
 
       display: flex;
       justify-content: center;
@@ -63,6 +64,23 @@ const Processor = styled.div`
       }
 `
 
+const Text = styled.div`
+      font-size: var(--fontxs);
+      color: var(--greyLight);
+      width: 30%;
+      height: 40vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+            margin: 0.2rem 0;
+            padding-left: 2rem;
+      }
+
+`
+
 const ProcessorSection = () => {
   return (
     <Section>
@@ -70,6 +88,16 @@ const ProcessorSection = () => {
        <Processor>
             <img src={a15} alt="A15 processor" />
        </Processor>
+       <Text>
+            <span>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                  Animi fuga deleniti porro quasi.
+            </span>
+            <span>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                  Animi fuga deleniti porro quasi.
+            </span>
+       </Text>
     </Section>
   )
 }
