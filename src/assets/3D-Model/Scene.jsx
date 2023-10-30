@@ -25,7 +25,8 @@ export function Model({ ...props }) {
       scrollTrigger:{
         trigger: "#phone-model",
         start: "top top",
-        end: "bottom+=500 bottom",
+        endTrigger: "#battery",
+        end: "top top",
         markers: true,
       }
     });
