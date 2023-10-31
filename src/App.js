@@ -5,6 +5,7 @@ import DesignSection from "./sections/DesignSection";
 import DisplaySection from "./sections/DisplaySection";
 import HeroSection from "./sections/HeroSection";
 import PhoneModel from "./sections/PhoneModel";
+import PricingSection from "./sections/PricingSection";
 import ProcessorSection from "./sections/ProcessorSection";
 import Quote from "./sections/Quote";
 import { GlobalStyle } from "./styles/GlobalStyle";
@@ -22,6 +23,7 @@ function App() {
       <BatterySection />
       <ColorSection/>
       <CameraSection />
+      <PricingSection />
     </>
   );
 }

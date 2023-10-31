@@ -42,6 +42,13 @@ const TitleContainer = styled.div`
             position: absolute;
             top: 0;
             right: 0;
+
+            &>*:nth-child(2) {
+                  margin-left: 6rem;
+            }
+            &>*:nth-child(3) {
+                  margin-left: 12rem;
+            }
 `
 
 const Title = styled.h1`
