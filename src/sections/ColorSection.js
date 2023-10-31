@@ -151,7 +151,7 @@ const ColorSection = () => {
   return (
     <Section ref={sectionRef} >
             <Left ref={leftRef} />
-            <Center ref={textRef} >Sierra Blue</Center>
+            <Center ref={textRef} />
             <Right ref={rightRef} />
     </Section>
   )

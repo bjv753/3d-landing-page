@@ -24,6 +24,7 @@ export function Model({ ...props }) {
 
   useLayoutEffect(() => {
     camera.position.set(0, 2, 6)
+    materials.Body.color.set("#9BB5CE");
     
     let t1 = gsap.timeline({
       scrollTrigger:{
@@ -32,7 +33,7 @@ export function Model({ ...props }) {
         endTrigger: "#battery",
         end: "top top",
         scrub: true,
-        markers: true,
+        // markers: true,
       }
     });
 
