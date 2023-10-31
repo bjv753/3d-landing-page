@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Canvas } from '@react-three/fiber'
-import { Model } from '../assets/3D-Model/Scene'
+import { Model } from '../components/Scene'
 import { Suspense } from 'react'
 
 

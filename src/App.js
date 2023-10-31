@@ -1,4 +1,5 @@
 import BatterySection from "./sections/BatterySection";
+import CameraSection from "./sections/CameraSection";
 import ColorSection from "./sections/ColorSection";
 import DesignSection from "./sections/DesignSection";
 import DisplaySection from "./sections/DisplaySection";
@@ -20,6 +21,7 @@ function App() {
       <ProcessorSection />
       <BatterySection />
       <ColorSection/>
+      <CameraSection />
     </>
   );
 }

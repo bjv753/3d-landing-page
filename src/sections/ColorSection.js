@@ -1,7 +1,9 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect, Suspense } from 'react';
 import { gsap } from "gsap";
 import styled from 'styled-components';
 import { useGLTF } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { Model2 } from '../components/Scene2';
 
 // Error is in ColorSection 
 
@@ -152,7 +154,15 @@ const ColorSection = () => {
     <Section ref={sectionRef} >
             <Left ref={leftRef} />
             <Center ref={textRef} />
-            <Right ref={rightRef} />
+            <Right ref={rightRef} >
+                  <Canvas camera={{ fov:6.5 }} >
+                  <ambientLight intensity={2.25} />
+                  <directionalLight intensity={0.4} />
+                  <Suspense fallback={null} >
+                  <Model2 />
+                  </Suspense>
+                  </Canvas>
+            </Right>
     </Section>
   )
 }
