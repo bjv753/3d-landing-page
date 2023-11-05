@@ -56,6 +56,7 @@ const Colors = styled.ul`
 const PricingSection = () => {
 
       const { materials } = useGLTF('/scene.gltf');
+      const sectionRef = useRef(null);
 
       let updateColor = (color) => {
 
