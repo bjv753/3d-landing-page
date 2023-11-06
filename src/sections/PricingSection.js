@@ -60,6 +60,24 @@ const Colors = styled.ul`
 
       border: 1px solid var(--dark);
 `
+
+const Details = styled.div`
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+`
+
+const Title = styled.h2`
+font-size: var(--fontxl);
+padding: 0.3rem;
+`
+      
+const SubTitle = styled.h2`
+font-size: var(--fontmd);
+font-family: var(--fontR);
+`
       
 const PricingSection = () => {
 
@@ -100,6 +118,13 @@ const PricingSection = () => {
 
 
             </Phone>
+
+            <Details>
+                  <SubTitle>iPhone</SubTitle>
+                  <Title>14 Pro Max</Title>
+                  <SubTitle>From $1099*</SubTitle>
+            </Details>
+
     </Section>
     </Container>
   )
