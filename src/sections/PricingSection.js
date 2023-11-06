@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Model3 } from '../components/Scene3'
 import { OrbitControls, useGLTF } from '@react-three/drei'
 
-const Section = styled.div`
+const Container = styled.div`
       width: 100vw;
       height: 100vh;
       position: relative;
@@ -12,6 +12,15 @@ const Section = styled.div`
 
       background-color: var(--white);
       overflow: hidden;
+` 
+
+const Section = styled.div`
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+
+      background-color: "#9BB5CE";
 ` 
 
 const Phone = styled.div`
@@ -72,7 +81,7 @@ const PricingSection = () => {
                   <Canvas camera={{ fov:14 }} >
                         <ambientLight intensity={1} />
                         <directionalLight intensity={0.4} />
-                        <Suspense  fallback={null} >
+                        <Suspense fallback={null} > 
                         <Model3 />
                         </Suspense>
 
