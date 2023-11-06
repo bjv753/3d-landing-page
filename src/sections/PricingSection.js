@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+import React, { Suspense, useRef } from 'react'
 import styled from 'styled-components'
 import { Model3 } from '../components/Scene3'
 import { OrbitControls, useGLTF } from '@react-three/drei'
@@ -52,7 +52,6 @@ const Colors = styled.ul`
       border: 1px solid var(--dark);
 `
       
-
 const PricingSection = () => {
 
       const { materials } = useGLTF('/scene.gltf');
@@ -67,7 +66,8 @@ const PricingSection = () => {
      }
 
   return (
-    <Section ref={sectionRef}>
+    <Container>
+      <Section ref={sectionRef}>
             <Phone>
                   <Canvas camera={{ fov:14 }} >
                         <ambientLight intensity={1} />
@@ -80,15 +80,19 @@ const PricingSection = () => {
                   </Canvas>
 
                   <Colors>
-                        <Color color="#9BB5CE"  onClick={() => updateColor("#9BB5CE", "155, 181, 206"  )}/>
-                        <Color color="#F9E5C9"  onClick={() => updateColor("#F9E5C9", "249, 229, 201"  )}/>
-                        <Color color="#505F4E"  onClick={() => updateColor("#505F4E", "80, 95, 78"  )}/>
-                        <Color color="#574f6f"    onClick={() => updateColor("#574f6f", "87, 79, 111"  )}/>
-                        <Color color="#A50011"  onClick={() => updateColor("#A50011", "165, 0, 17"  )}/>
-                        <Color color="#215E7C"  onClick={() => updateColor("#215E7C", "33, 94, 124"  )}/>
+                        <Color color="#9BB5CE"  onClick={() => updateColor("#9BB5CE", "155, 181, 206" )}/>
+                        <Color color="#F9E5C9"  onClick={() => updateColor("#F9E5C9", "249, 229, 201")}/>
+                        <Color color="#505F4E"  onClick={() => updateColor("#505F4E", "80, 95, 78")}/>
+                        <Color color="#574f6f"    onClick={() => updateColor("#574f6f", "87, 79, 111")}/>
+                        <Color color="#A50011"  onClick={() => updateColor("#A50011", "165, 0, 17")}/>
+                        <Color color="#215E7C"  onClick={() => updateColor("#215E7C", "33, 94, 124")}/>
+                        
                   </Colors>
+
+
             </Phone>
     </Section>
+    </Container>
   )
 }
 
