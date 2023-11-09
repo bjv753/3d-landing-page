@@ -80,7 +80,41 @@ font-family: var(--fontR);
 `
 
 const ButtonContainer = styled.div`
+      display: flex;;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1rem;
+`
 
+const Btn = styled.button`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 0;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+
+      border: none;
+      outline: none;
+
+      background-color: var(--blue);
+      color: var(--white);
+      cursor: pointer;
+
+      &:hover{
+            opacity: 0.7;
+      }
+`
+
+const BtnLink = styled.a`
+color: var(--blue);
+text-decoration: none;
+margin-left: 1.5rem;
+
+&:hover {
+      text-decoration: underline;
+}
 `
       
 const PricingSection = () => {
