@@ -116,6 +116,12 @@ margin-left: 1.5rem;
       text-decoration: underline;
 }
 `
+
+const IndicatorText = styled.div`
+font-size: var(--fontsm);
+position: absolute;
+top: 1rem;
+`
       
 const PricingSection = () => {
 
@@ -134,6 +140,7 @@ const PricingSection = () => {
     <Container>
       <Section ref={sectionRef}>
             <Phone>
+                  <IndicatorText>360&deg; &#x27f2;</IndicatorText>
                   <Canvas camera={{ fov:14 }} >
                         <ambientLight intensity={1} />
                         <directionalLight intensity={0.4} />
@@ -163,7 +170,7 @@ const PricingSection = () => {
                   <SubTitle>From $1099*</SubTitle>
                  <ButtonContainer>
                         <Btn>Buy</Btn>
-                        <BtnLink href="#" >Learn More</BtnLink>
+                        <BtnLink href="#" >Learn More &#x2192; </BtnLink>
                   </ButtonContainer> 
             </Details>
 
