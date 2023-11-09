@@ -78,6 +78,10 @@ const SubTitle = styled.h2`
 font-size: var(--fontmd);
 font-family: var(--fontR);
 `
+
+const ButtonContainer = styled.div`
+
+`
       
 const PricingSection = () => {
 
