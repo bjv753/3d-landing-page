@@ -93,7 +93,7 @@ const CameraSection = () => {
                   }
             }).to(video1Elem, {scale: 0.3}, "key1").to(video2Elem, {scale: 0.6}, "key1")
 
-            elements("h1").forEach(el => 
+            elements("h1").forEach((el) => 
                   t2.fromTo(
                         el,
                         {
