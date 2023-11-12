@@ -1,8 +1,9 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useRef, useContext } from 'react'
 import styled from 'styled-components'
 import { Model3 } from '../components/Scene3'
 import { OrbitControls, useGLTF } from '@react-three/drei'
+import { ColorContext } from '../context/ColorContext'
 
 const Container = styled.div`
       width: 100vw;
@@ -127,6 +128,10 @@ const PricingSection = () => {
 
       const { materials } = useGLTF('/scene.gltf');
       const sectionRef = useRef(null);
+
+      const { currentColor } = useContext(ColorContext) 
+
+      console.log(currentColor)
 
       let updateColor = (color, rgbColor) => {
 
