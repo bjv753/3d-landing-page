@@ -138,7 +138,6 @@ const PricingSection = () => {
             materials.Body.color.set(color);
 
             sectionRef.current.style.backgroundColor = `rgbaColor(${rgbColor}, 0.4)`;
-
      }
 
   return (
