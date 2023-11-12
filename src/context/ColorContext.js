@@ -4,7 +4,7 @@ import { createContext } from "react";
 
 export const ColorContext = createContext({})
 
-export const colorContetxProvider = ({children}) => {
+export const ColorContetxProvider = ({children}) => {
 
       const [currentColor, setCurrentColor] = useState({
             color: "#9BB5CE",
