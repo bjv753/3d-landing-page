@@ -1,9 +1,10 @@
-import React, { useRef, useLayoutEffect, Suspense } from 'react';
+import React, { useRef, useLayoutEffect, Suspense, useContext } from 'react';
 import { gsap } from "gsap";
 import styled from 'styled-components';
 import { useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Model2 } from '../components/Scene2';
+import { ColorContext } from '../context/ColorContext';
 
 // Error is in ColorSection 
 
@@ -66,6 +67,8 @@ const ColorSection = () => {
       const textRef= useRef(null);
 
       const { materials } = useGLTF('/scene.gltf');
+
+      const { currentColor, changeColorContext } = useContext(ColorContext) 
 
       useLayoutEffect(() => {
             let Elem = sectionRef.current;
