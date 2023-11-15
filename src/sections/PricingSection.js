@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useRef, useContext } from 'react'
+import React, { Suspense, useRef, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Model3 } from '../components/Scene3'
 import { OrbitControls, useGLTF } from '@react-three/drei'
@@ -126,12 +126,15 @@ top: 1rem;
       
 const PricingSection = () => {
 
-      const { materials } = useGLTF('/scene.gltf');
       const sectionRef = useRef(null);
 
       const { currentColor, changeColorContext } = useContext(ColorContext) 
 
       console.log(currentColor)
+
+      useEffect(() => {
+            sectionRef.current.style.backgroundColor = `rgbaColor(${currentColor.rgbColor}, 0.4)`;
+      }, [currentColor])
 
       let updateColor = (color, text, rgbColor) => {
 
@@ -141,8 +144,8 @@ const PricingSection = () => {
                   rgbColor,
             }
             changeColorContext(colorObj)
+            
 
-            sectionRef.current.style.backgroundColor = `rgbaColor(${currentColor.rgbColor}, 0.4)`;
      }
 
   return (

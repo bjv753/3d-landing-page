@@ -78,13 +78,18 @@ const ColorSection = () => {
 
             let updateColor = (color, text, rgbColor) => {
 
-                   materials.Body.color.set(color);
+                  const colorObj = {
+                        color,
+                        text,
+                        rgbColor,
+                  }
+                  changeColorContext(colorObj)
 
-                  textElem.innerText = text;
-                  textElem.style.color = color;
+                  textElem.innerText = currentColor.text;
+                  textElem.style.color = currentColor.color;
 
-                  rightElem.style.backgroundColor = `rgba(${rgbColor}, 0.8)`
-                  leftElem.style.backgroundColor = `rgba(${rgbColor}, 0.8)`
+                  rightElem.style.backgroundColor = `rgba(${currentColor.rgbColor}, 0.8)`
+                  leftElem.style.backgroundColor = `rgba(${currentColor.rgbColor}, 0.8)`
             }
 
             // pin the section 
