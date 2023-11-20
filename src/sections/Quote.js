@@ -60,6 +60,23 @@ span{
   background-image: linear-gradient(-180deg, var(--gradient));
   font-family: var(--fontR);
 }
+
+@media (max-width: 70em) {
+  width: 70%;
+}
+
+@media (max-width: 70em) {
+  width: 70%;
+}
+
+@media (max-width: 70em) {
+  width: 70%;
+}
+
+@media (max-width: 70em) {
+  width: 70%;
+}
+
 `
 
 const Quote = () => {
