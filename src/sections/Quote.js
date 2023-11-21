@@ -61,20 +61,21 @@ span{
   font-family: var(--fontR);
 }
 
-@media (max-width: 70em) {
+@media screen and (max-width: 70em) {
   width: 70%;
 }
 
-@media (max-width: 70em) {
+@media screen and (max-width: 70em) {
   font-size: var(--fontmd);
+  height: var(--fontsm);
 }
 
-@media (max-width: 70em) {
-  width: 70%;
+@media screen and (max-width: 40em) {
+  width: 90%;
 }
 
-@media (max-width: 70em) {
-  width: 70%;
+@media screen and (max-width: 30em) {
+
 }
 
 `
