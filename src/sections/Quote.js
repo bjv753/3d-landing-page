@@ -66,7 +66,7 @@ span{
 }
 
 @media (max-width: 70em) {
-  width: 70%;
+  font-size: var(--fontmd);
 }
 
 @media (max-width: 70em) {
