@@ -75,7 +75,7 @@ span{
 }
 
 @media screen and (max-width: 30em) {
-
+  font-size: var(--fontxs);
 }
 
 `
